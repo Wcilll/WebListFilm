@@ -7,6 +7,8 @@ body {
   margin: 0;
   background-color: #393e46;
   overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
 }
 
 li,
@@ -36,8 +38,9 @@ header {
   justify-content: center;
   align-items: center;
   padding: 20px 10%;
-  background-color: #222831;
-  box-shadow: 0 1px 10px rgba(236, 233, 233, 0.973);
+  backdrop-filter: blue(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 .navbar-all {
@@ -165,4 +168,11 @@ section {
 
 .horizontal-scroll::-webkit-scrollbar {
   display: none;
+}
+
+.divider {
+  height: 10px;
+  width: 100%;
+  background-color: #a08963;
+  margin: 2rem 0;
 }
