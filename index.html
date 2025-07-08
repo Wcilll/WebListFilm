@@ -3,21 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>slide content</title>
+    <title>WebListFilm - Anime & K-Drama</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul class="navbar-all">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Explore</a></li>
-          <li><a href="#">Bookmark</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="container-welcome">
+    <!-- Welcome Fullscreen Section -->
+    <section class="welcome-section" id="welcome">
       <h1>Selamat Datang di WebListFilm!</h1>
       <p>
         Temukan rekomendasi anime seru & K-Drama terbaik hanya di sini! Dari
@@ -25,202 +16,59 @@
         lengkap. Yuk mulai eksplor dan tambahkan tontonan favoritmu ke list
         sekarang!
       </p>
+      <button class="start-btn" onclick="startSite()">Mulai Eksplor</button>
     </section>
-    <section class="container">
-      <h1 class="anime-section">Anime Section</h1>
-      <div class="horizontal-scroll">
-        <div class="wrapper">
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+      <header>
+        <nav>
+          <ul class="navbar-all">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Bookmark</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="choice-film">
+        <h2>Pilih Kategori Film</h2>
+        <button class="category-button" onclick="filterContent('anime')">
+          Anime
+        </button>
+        <button class="category-button" onclick="filterContent('kdrama')">
+          K-Drama
+        </button>
+      </section>
+
+      <section class="anime-section" id="animeSection">
+        <h2>Anime Section</h2>
+        <div class="horizontal-scroll">
           <div class="card">
-            <div class="front-page">
-              <div class="card-info">
-                <h2 class="card-name">One Piece</h2>
-              </div>
-            </div>
-            <div class="back-page">
-              <div class="card-content">
-                <h3>One Piece</h3>
-                <p class="card-description">
-                  One Piece adalah sebuah seri manga Jepang yang ditulis dan
-                  diilustrasikan oleh Eiichiro Oda. Manga ini telah dimuat di
-                  majalah Weekly Shōnen Jump milik Shueisha sejak tanggal 22
-                  Juli 1997, dan telah dibundel menjadi 105 volume tankōbon
-                  hingga Maret 2023. Ceritanya mengisahkan petualangan Monkey D.
-                  Luffy
-                </p>
-                <button class="card-button">Lebih lanjut</button>
-              </div>
-            </div>
+            <h3>One Piece</h3>
+            <p>Petualangan Monkey D. Luffy mencari One Piece!</p>
+          </div>
+          <div class="card">
+            <h3>Naruto</h3>
+            <p>Seorang ninja muda mengejar mimpinya jadi Hokage!</p>
           </div>
         </div>
-        <div class="wrapper">
+      </section>
+
+      <section class="kdrama-section" id="kdramaSection">
+        <h2>K-Drama Section</h2>
+        <div class="horizontal-scroll">
           <div class="card">
-            <div class="front-page">
-              <div class="card-info">
-                <h2 class="card-name">One Piece</h2>
-              </div>
-            </div>
-            <div class="back-page">
-              <div class="card-content">
-                <h3>One Piece</h3>
-                <p class="card-description">
-                  One Piece adalah sebuah seri manga Jepang yang ditulis dan
-                  diilustrasikan oleh Eiichiro Oda. Manga ini telah dimuat di
-                  majalah Weekly Shōnen Jump milik Shueisha sejak tanggal 22
-                  Juli 1997, dan telah dibundel menjadi 105 volume tankōbon
-                  hingga Maret 2023. Ceritanya mengisahkan petualangan Monkey D.
-                  Luffy
-                </p>
-                <button class="card-button">Lebih lanjut</button>
-              </div>
-            </div>
+            <h3>Crash Landing on You</h3>
+            <p>Kisah cinta lintas negara antara Korea Selatan & Utara.</p>
+          </div>
+          <div class="card">
+            <h3>Vincenzo</h3>
+            <p>Pengacara mafia Italia kembali ke Korea dan melawan korupsi.</p>
           </div>
         </div>
-        <div class="wrapper">
-          <div class="card">
-            <div class="front-page">
-              <div class="card-info">
-                <h2 class="card-name">One Piece</h2>
-              </div>
-            </div>
-            <div class="back-page">
-              <div class="card-content">
-                <h3>One Piece</h3>
-                <p class="card-description">
-                  One Piece adalah sebuah seri manga Jepang yang ditulis dan
-                  diilustrasikan oleh Eiichiro Oda. Manga ini telah dimuat di
-                  majalah Weekly Shōnen Jump milik Shueisha sejak tanggal 22
-                  Juli 1997, dan telah dibundel menjadi 105 volume tankōbon
-                  hingga Maret 2023. Ceritanya mengisahkan petualangan Monkey D.
-                  Luffy
-                </p>
-                <button class="card-button">Lebih lanjut</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="card">
-            <div class="front-page">
-              <div class="card-info">
-                <h2 class="card-name">One Piece</h2>
-              </div>
-            </div>
-            <div class="back-page">
-              <div class="card-content">
-                <h3>One Piece</h3>
-                <p class="card-description">
-                  One Piece adalah sebuah seri manga Jepang yang ditulis dan
-                  diilustrasikan oleh Eiichiro Oda. Manga ini telah dimuat di
-                  majalah Weekly Shōnen Jump milik Shueisha sejak tanggal 22
-                  Juli 1997, dan telah dibundel menjadi 105 volume tankōbon
-                  hingga Maret 2023. Ceritanya mengisahkan petualangan Monkey D.
-                  Luffy
-                </p>
-                <button class="card-button">Lebih lanjut</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- <div class="divider"></div> -->
-    <section class="container-football">
-      <h1 class="anime-section">K-Drama</h1>
-      <div class="horizontal-scroll">
-        <div class="wrapper">
-          <div class="card">
-            <div class="front-page">
-              <div class="card-info">
-                <h2 class="card-name">One Piece</h2>
-              </div>
-            </div>
-            <div class="back-page">
-              <div class="card-content">
-                <h3>One Piece</h3>
-                <p class="card-description">
-                  One Piece adalah sebuah seri manga Jepang yang ditulis dan
-                  diilustrasikan oleh Eiichiro Oda. Manga ini telah dimuat di
-                  majalah Weekly Shōnen Jump milik Shueisha sejak tanggal 22
-                  Juli 1997, dan telah dibundel menjadi 105 volume tankōbon
-                  hingga Maret 2023. Ceritanya mengisahkan petualangan Monkey D.
-                  Luffy
-                </p>
-                <button class="card-button">Lebih lanjut</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="card">
-            <div class="front-page">
-              <div class="card-info">
-                <h2 class="card-name">One Piece</h2>
-              </div>
-            </div>
-            <div class="back-page">
-              <div class="card-content">
-                <h3>One Piece</h3>
-                <p class="card-description">
-                  One Piece adalah sebuah seri manga Jepang yang ditulis dan
-                  diilustrasikan oleh Eiichiro Oda. Manga ini telah dimuat di
-                  majalah Weekly Shōnen Jump milik Shueisha sejak tanggal 22
-                  Juli 1997, dan telah dibundel menjadi 105 volume tankōbon
-                  hingga Maret 2023. Ceritanya mengisahkan petualangan Monkey D.
-                  Luffy
-                </p>
-                <button class="card-button">Lebih lanjut</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="card">
-            <div class="front-page">
-              <div class="card-info">
-                <h2 class="card-name">One Piece</h2>
-              </div>
-            </div>
-            <div class="back-page">
-              <div class="card-content">
-                <h3>One Piece</h3>
-                <p class="card-description">
-                  One Piece adalah sebuah seri manga Jepang yang ditulis dan
-                  diilustrasikan oleh Eiichiro Oda. Manga ini telah dimuat di
-                  majalah Weekly Shōnen Jump milik Shueisha sejak tanggal 22
-                  Juli 1997, dan telah dibundel menjadi 105 volume tankōbon
-                  hingga Maret 2023. Ceritanya mengisahkan petualangan Monkey D.
-                  Luffy
-                </p>
-                <button class="card-button">Lebih lanjut</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="card">
-            <div class="front-page">
-              <div class="card-info">
-                <h2 class="card-name">One Piece</h2>
-              </div>
-            </div>
-            <div class="back-page">
-              <div class="card-content">
-                <h3>One Piece</h3>
-                <p class="card-description">
-                  One Piece adalah sebuah seri manga Jepang yang ditulis dan
-                  diilustrasikan oleh Eiichiro Oda. Manga ini telah dimuat di
-                  majalah Weekly Shōnen Jump milik Shueisha sejak tanggal 22
-                  Juli 1997, dan telah dibundel menjadi 105 volume tankōbon
-                  hingga Maret 2023. Ceritanya mengisahkan petualangan Monkey D.
-                  Luffy
-                </p>
-                <button class="card-button">Lebih lanjut</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
