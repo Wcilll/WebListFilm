@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+*/
 
 /* Font and Reset */
 * {
@@ -9,7 +10,8 @@
 }
 
 body {
-  background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+  /* background: linear-gradient(to right, #1c1c1c, #2e2e2e); */
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
   color: white;
   overflow-x: hidden;
 }
@@ -73,7 +75,6 @@ header nav {
 .main-content {
   display: none;
   animation: fadeIn 1s ease-in;
-  padding: 2rem;
 }
 
 @keyframes fadeIn {
@@ -127,3 +128,122 @@ header nav {
 .kdrama-section {
   display: none;
 }
+
+.wrapper {
+  perspective: 3000px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.front-page,
+.back-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.front-page {
+  background-image: url(img/image.jpg.jpeg);
+  background-size: cover;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 50px;
+  left: 126px;
+  color: #110303b2;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.card-name {
+  font-style: 2rem;
+  font-weight: bold;
+}
+
+.back-page {
+  background-color: #1e272e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  text-align: center;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.card-content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.card-button {
+  background-color: #b6b09f;
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: transparent;
+  border: 1px solid #b6b09f;
+}
+
+.horizontal-scroll {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-height: 100vh;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+/* 
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+} */
