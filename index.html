@@ -24,14 +24,14 @@
       <header>
         <nav>
           <ul class="navbar-all">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Explore</a></li>
+            <li><a href="#" onclick="goToSection('trenSection')">Home</a></li>
+            <li><a href="#" onclick="goToSection('choiceFilm')">Explore</a></li>
             <li><a href="#">Bookmark</a></li>
           </ul>
         </nav>
       </header>
 
-      <section class="tren-section">
+      <section class="tren-section" id="trenSection">
         <h2>Tren Terkini</h2>
         <h1 class="anime-section">Anime Section</h1>
         <!-- card item -->
@@ -176,7 +176,7 @@
           </div>
         </div>
       </section>
-      <section class="choice-film">
+      <section class="choice-film" id="choiceFilm">
         <h2>Pilih Kategori Film</h2>
         <button class="category-button" onclick="filterContent('anime')">
           Anime

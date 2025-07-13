@@ -1,7 +1,7 @@
 function startSite() {
   document.getElementById("welcome").style.display = "none";
   document.getElementById("mainContent").style.display = "block";
-  // filterContent("anime"); // tampilkan default anime
+  filterContent("anime"); // tampilkan default anime
 }
 
 function filterContent(type) {
@@ -16,6 +16,7 @@ function filterContent(type) {
     anime.style.display = "none";
   }
 }
+
 // ...existing code...
 const scrollContainer = document.querySelector(".horizontal-scroll");
 let isDown = false;
@@ -43,4 +44,11 @@ scrollContainer.addEventListener("mousemove", (e) => {
   const walk = (x - startX) * 2; // scroll-fast
   scrollContainer.scrollLeft = scrollLeft - walk;
 });
-// ...existing code...
+
+// Function to scroll to a specific section
+function goToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
